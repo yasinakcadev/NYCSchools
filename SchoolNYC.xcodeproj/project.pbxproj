@@ -34,6 +34,8 @@
 		ECA50C6C29BD0779001D115D /* SATDetailCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECA50C6B29BD0779001D115D /* SATDetailCollectionViewCell.swift */; };
 		ECC8F2FF29B8B0D200DB0165 /* SchoolDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECC8F2FE29B8B0D200DB0165 /* SchoolDetailViewModel.swift */; };
 		ECC8F30129B8B11300DB0165 /* SchoolViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECC8F30029B8B11300DB0165 /* SchoolViewModel.swift */; };
+		ECE5700E29BE555C0061E7DB /* SchoolMapAnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECE5700D29BE555C0061E7DB /* SchoolMapAnotation.swift */; };
+		ECE5701029BE56E50061E7DB /* SchoolDetailMapCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECE5700F29BE56E50061E7DB /* SchoolDetailMapCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -91,6 +93,8 @@
 		ECA50C6B29BD0779001D115D /* SATDetailCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SATDetailCollectionViewCell.swift; sourceTree = "<group>"; };
 		ECC8F2FE29B8B0D200DB0165 /* SchoolDetailViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SchoolDetailViewModel.swift; sourceTree = "<group>"; };
 		ECC8F30029B8B11300DB0165 /* SchoolViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SchoolViewModel.swift; sourceTree = "<group>"; };
+		ECE5700D29BE555C0061E7DB /* SchoolMapAnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchoolMapAnotation.swift; sourceTree = "<group>"; };
+		ECE5700F29BE56E50061E7DB /* SchoolDetailMapCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchoolDetailMapCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -259,6 +263,7 @@
 				EC6E4CB529B7CF7300181728 /* SchoolSectionHeader.swift */,
 				ECA50C6B29BD0779001D115D /* SATDetailCollectionViewCell.swift */,
 				EC97219829BE028B00E3D9ED /* SchoolListStateView.swift */,
+				ECE5700F29BE56E50061E7DB /* SchoolDetailMapCollectionViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -288,6 +293,7 @@
 			isa = PBXGroup;
 			children = (
 				EC6E4CB129B7CB0D00181728 /* SchoolSection.swift */,
+				ECE5700D29BE555C0061E7DB /* SchoolMapAnotation.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -533,6 +539,8 @@
 			files = (
 				EC6E4CAB29B7C00100181728 /* SchoolListCollectionViewCell.swift in Sources */,
 				EC6E4CA729B7BBAE00181728 /* DataError.swift in Sources */,
+				ECE5700E29BE555C0061E7DB /* SchoolMapAnotation.swift in Sources */,
+				ECE5701029BE56E50061E7DB /* SchoolDetailMapCollectionViewCell.swift in Sources */,
 				EC2D209329B9A864006338E4 /* SchoolSAT.swift in Sources */,
 				EC6E4C6E29B7BA6000181728 /* SchoolViewController.swift in Sources */,
 				EC97219929BE028B00E3D9ED /* SchoolListStateView.swift in Sources */,

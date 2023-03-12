@@ -12,15 +12,18 @@ class SchoolDetailViewController: UIViewController {
     
     private var collectionView: UICollectionView?
     var detailViewModel: SchoolDetailViewModel?
-    private let sectionList: [String] = ["School Detail", "SAT"]
+    private let sectionList: [String] = ["School Detail", "SAT", "School Map"]
     
     private struct Constants {
         static let identifier = "detailIdentifier"
         static let headerIdentifier = "detailHeaderIdentifier"
         static let satIdentifier = "satIdentifier"
+        static let mapIdentifier = "mapIdentifier"
+        
         static let cellHeight = 380.0
         static let headerHeight = 50.0
         static let satCellHeight = 200.0
+        static let mappCellHeight = 250.0
     }
     
     override func viewDidLoad() {
@@ -47,6 +50,7 @@ class SchoolDetailViewController: UIViewController {
         
         collectionView.register(SchoolDetailCollectionViewCell.self, forCellWithReuseIdentifier: Constants.identifier)
         collectionView.register(SATDetailCollectionViewCell.self, forCellWithReuseIdentifier: Constants.satIdentifier)
+        collectionView.register(SchoolDetailMapCollectionViewCell.self, forCellWithReuseIdentifier: Constants.mapIdentifier)
         collectionView.register(SchoolSectionHeader.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: Constants.headerIdentifier)
         
         collectionView.delegate = self
@@ -74,6 +78,7 @@ extension SchoolDetailViewController: UICollectionViewDataSource {
                 return cell
             }
             schoolDetailCell.update(school: school)
+            
             return schoolDetailCell
             
         case 1:
@@ -83,8 +88,17 @@ extension SchoolDetailViewController: UICollectionViewDataSource {
                 return cell
             }
             satcell.update(sat: sat)
-            return satcell
             
+            return satcell
+        case 2:
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Constants.mapIdentifier, for: indexPath)
+            guard let mapCell = cell as? SchoolDetailMapCollectionViewCell,
+                  let school = detailViewModel?.school else {
+                return cell
+            }
+            mapCell.populate(school: school)
+            
+            return mapCell
         default:
             return UICollectionViewCell()
         }
@@ -105,8 +119,10 @@ extension SchoolDetailViewController: UICollectionViewDelegateFlowLayout {
         switch indexPath.section {
         case 0:
             return CGSize(width: collectionView.bounds.width, height: Constants.cellHeight)
-        default:
+        case 1:
             return CGSize(width: collectionView.bounds.width, height: Constants.satCellHeight)
+        default:
+            return CGSize(width: collectionView.bounds.width, height: Constants.mappCellHeight)
         }
     }
 }
